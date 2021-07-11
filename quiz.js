@@ -85,8 +85,11 @@ function selectAnswer(e) {
         startButton.innerText = 'Restart'
         startButton.classList.remove('hide')
     }
-    if (e === correct) {
-        countRightAnswers++
+
+    if (correct === "true") {
+        let answers = parseInt(countRightAnswers.textContent);
+        answers++;
+        countRightAnswers.textContent = answers;
     }
 }
 
